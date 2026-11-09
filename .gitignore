@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+.venv/
+venv/
+env/
+ENV/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.xml
+.tox/
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Data / models (too large for git)
+data/
+*.parquet
+*.csv
+*.pkl
+*.pt
+*.bin
+*.safetensors
+*.joblib
+models/checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/build/
+frontend/dist/
+
+# Docker
+.docker/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+

@@ -1,0 +1,72 @@
+version: "3.9"
+
+services:
+  # ── PostgreSQL with pgvector ──────────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: yieldlens_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: yieldlens
+      POSTGRES_PASSWORD: yieldlens
+      POSTGRES_DB: yieldlens
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U yieldlens -d yieldlens"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── MLflow Tracking Server ────────────────────────────────────────────────
+  mlflow:
+    image: python:3.11-slim
+    container_name: yieldlens_mlflow
+    restart: unless-stopped
+    working_dir: /mlflow
+    command: >
+      bash -c "pip install mlflow psycopg2-binary boto3 --quiet &&
+               mlflow server
+               --host 0.0.0.0
+               --port 5001
+               --backend-store-uri postgresql://yieldlens:yieldlens@postgres:5432/mlflow
+               --default-artifact-root /mlflow/artifacts"
+    ports:
+      - "5001:5001"
+    volumes:
+      - mlflow_artifacts:/mlflow/artifacts
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # ── YieldLens FastAPI Backend ─────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yieldlens_api
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+asyncpg://yieldlens:yieldlens@postgres:5432/yieldlens
+      DATABASE_URL_SYNC: postgresql://yieldlens:yieldlens@postgres:5432/yieldlens
+      MLFLOW_TRACKING_URI: http://mlflow:5001
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - model_cache:/root/.cache
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  postgres_data:
+  mlflow_artifacts:
+  model_cache:
+
