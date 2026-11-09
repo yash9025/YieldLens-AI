@@ -1,0 +1,164 @@
+{
+  "description": "YieldLens AI held-out evaluation set — 30 historical dates with manually reviewed facts",
+  "version": "1.0",
+  "note": "These dates were selected to cover significant rate moves and FOMC meetings. Never use for training.",
+  "dates": [
+    {
+      "date": "2022-03-16",
+      "event": "First 2022 FOMC rate hike (+25 bps)",
+      "key_facts": [
+        {"series": "DFF", "type": "level", "expected_value": 0.33, "units": "percent"},
+        {"series": "DGS10", "type": "daily_change", "expected_direction": "up", "units": "bps"},
+        {"series": "DGS2", "type": "daily_change", "expected_direction": "up", "units": "bps"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2022-05-04",
+      "event": "FOMC +50 bps hike (largest since 2000)",
+      "key_facts": [
+        {"series": "DFF", "type": "level", "units": "percent"},
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "T10Y2Y", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2022-06-15",
+      "event": "FOMC +75 bps hike (largest since 1994)",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DGS2", "type": "daily_change", "units": "bps"},
+        {"series": "DFF", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT"],
+      "split": "eval"
+    },
+    {
+      "date": "2022-11-02",
+      "event": "FOMC +75 bps hike (fourth consecutive)",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DGS2", "type": "weekly_change", "units": "bps"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2022-12-14",
+      "event": "FOMC +50 bps hike, pace slows",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DGS2", "type": "daily_change", "units": "bps"},
+        {"series": "T10Y2Y", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER", "SEP"],
+      "split": "eval"
+    },
+    {
+      "date": "2023-02-01",
+      "event": "FOMC +25 bps, pace further slows",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DFF", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2023-05-03",
+      "event": "FOMC +25 bps, possible pause signalled",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DGS2", "type": "daily_change", "units": "bps"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2023-07-26",
+      "event": "FOMC +25 bps (last 2023 hike)",
+      "key_facts": [
+        {"series": "DFF", "type": "level", "units": "percent"},
+        {"series": "DGS10", "type": "daily_change", "units": "bps"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2023-10-19",
+      "event": "10Y yield peaks above 5%",
+      "key_facts": [
+        {"series": "DGS10", "type": "level", "expected_above": 5.0, "units": "percent"},
+        {"series": "DGS10", "type": "ytd_change", "units": "bps"},
+        {"series": "T10Y2Y", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["MINUTES"],
+      "split": "eval"
+    },
+    {
+      "date": "2023-12-13",
+      "event": "FOMC holds, pivot language emerges",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DGS2", "type": "daily_change", "units": "bps"},
+        {"series": "DFF", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER", "SEP"],
+      "split": "eval"
+    },
+    {
+      "date": "2018-12-19",
+      "event": "FOMC +25 bps despite market pressure",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DFF", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2019-07-31",
+      "event": "FOMC -25 bps (first cut since 2008)",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DFF", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    },
+    {
+      "date": "2020-03-03",
+      "event": "Emergency FOMC cut -50 bps (COVID)",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DFF", "type": "level", "units": "percent"}
+      ],
+      "relevant_doc_types": ["STATEMENT"],
+      "split": "eval"
+    },
+    {
+      "date": "2020-03-15",
+      "event": "Emergency FOMC cut -100 bps to zero bound",
+      "key_facts": [
+        {"series": "DFF", "type": "level", "expected_value": 0.09, "units": "percent"},
+        {"series": "DGS10", "type": "weekly_change", "units": "bps"}
+      ],
+      "relevant_doc_types": ["STATEMENT"],
+      "split": "eval"
+    },
+    {
+      "date": "2021-11-03",
+      "event": "FOMC announces taper of asset purchases",
+      "key_facts": [
+        {"series": "DGS10", "type": "daily_change", "units": "bps"},
+        {"series": "DGS2", "type": "daily_change", "units": "bps"}
+      ],
+      "relevant_doc_types": ["STATEMENT", "PRESSER"],
+      "split": "eval"
+    }
+  ]
+}
+
