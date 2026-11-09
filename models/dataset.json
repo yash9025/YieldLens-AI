@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "domain": "FOMC Monetary Policy Stance",
+  "samples": [
+    {
+      "text": "The Committee decided to raise the target range for the federal funds rate to 5-1/4 to 5-1/2 percent.",
+      "labels": ["HAWKISH", "RATES"],
+      "source_date": "2023-07-26",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "Inflation remains elevated, and the Committee remains highly attentive to inflation risks.",
+      "labels": ["HAWKISH"],
+      "source_date": "2023-05-03",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee will continue reducing its holdings of Treasury securities and agency debt and agency mortgage-backed securities.",
+      "labels": ["HAWKISH", "BALANCE_SHEET"],
+      "source_date": "2023-06-14",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "In determining the extent of additional policy firming that may be appropriate to return inflation to 2 percent over time, the Committee will take into account the cumulative tightening of monetary policy.",
+      "labels": ["HAWKISH", "FORWARD_GUIDANCE"],
+      "source_date": "2023-02-01",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee decided to lower the target range for the federal funds rate by 50 basis points to 1 to 1-1/4 percent.",
+      "labels": ["DOVISH", "RATES"],
+      "source_date": "2020-03-03",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The coronavirus outbreak has harmed communities and disrupted economic activity in many countries, including the United States.",
+      "labels": ["NEUTRAL"],
+      "source_date": "2020-03-03",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee expects to maintain this target range until it is confident that the economy has weathered recent events and is on track to achieve its maximum employment and price stability goals.",
+      "labels": ["DOVISH", "FORWARD_GUIDANCE"],
+      "source_date": "2020-03-15",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Federal Reserve will continue to increase its holdings of Treasury securities by at least $80 billion per month and of agency mortgage-backed securities by at least $40 billion per month.",
+      "labels": ["DOVISH", "BALANCE_SHEET"],
+      "source_date": "2020-12-16",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "Economic activity has been expanding at a solid pace, and job gains have remained strong in recent months.",
+      "labels": ["NEUTRAL"],
+      "source_date": "2023-11-01",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The unemployment rate has remained low, and job gains have slowed from their strong pace earlier in the year but remain strong.",
+      "labels": ["NEUTRAL"],
+      "source_date": "2023-09-20",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee decided to maintain the target range for the federal funds rate at 5-1/4 to 5-1/2 percent.",
+      "labels": ["NEUTRAL", "RATES"],
+      "source_date": "2023-09-20",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook.",
+      "labels": ["FORWARD_GUIDANCE"],
+      "source_date": "2023-09-20",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "Tighter financial and credit conditions for households and businesses are likely to weigh on economic activity, hiring, and inflation.",
+      "labels": ["DOVISH"],
+      "source_date": "2023-11-01",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee decided to raise the target range for the federal funds rate by 75 basis points to 3-3/4 to 4 percent.",
+      "labels": ["HAWKISH", "RATES"],
+      "source_date": "2022-11-02",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee is strongly committed to returning inflation to its 2 percent objective.",
+      "labels": ["HAWKISH"],
+      "source_date": "2022-07-27",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee decided to begin reducing the monthly pace of its net asset purchases by $10 billion for Treasury securities and $5 billion for agency mortgage-backed securities.",
+      "labels": ["HAWKISH", "BALANCE_SHEET"],
+      "source_date": "2021-11-03",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee judged that similar reductions in the pace of net asset purchases will likely be appropriate each month, but it is prepared to adjust the pace of purchases if warranted by changes in the economic outlook.",
+      "labels": ["HAWKISH", "BALANCE_SHEET", "FORWARD_GUIDANCE"],
+      "source_date": "2021-11-03",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "Voting against the action was Esther L. George, who preferred at this meeting to raise the target range for the federal funds rate by 50 basis points.",
+      "labels": ["HAWKISH", "RATES"],
+      "source_date": "2022-06-15",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "The Committee will be patient as it determines what future adjustments to the target range for the federal funds rate may be appropriate.",
+      "labels": ["DOVISH", "FORWARD_GUIDANCE"],
+      "source_date": "2019-01-30",
+      "doc_type": "STATEMENT"
+    },
+    {
+      "text": "In light of global economic developments and muted inflation pressures, the Committee lowered the target range for the federal funds rate to 2 to 2-1/4 percent.",
+      "labels": ["DOVISH", "RATES"],
+      "source_date": "2019-07-31",
+      "doc_type": "STATEMENT"
+    }
+  ]
+}
+
